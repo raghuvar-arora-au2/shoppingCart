@@ -32,11 +32,11 @@
     <script>
         function successalert() {
             swal({
-                title: 'Thank You!',
-                text: 'Your Order has been placed successfully.',
+                title: 'login to order',
+                text: 'Your Order will be placed after the login',
                 type: 'success'
             }).then(() => {
-                window.location.href = "Home.aspx";
+                window.location.href = "Login.aspx";
             });
         }
     </script>
@@ -44,7 +44,7 @@
 <body>
     <div class="jumbotron">
         <div class="container text-center">
-            <h1>Shopping Cart Demo</h1>
+            <h1>Shopping Cart</h1>
         </div>
     </div>
 

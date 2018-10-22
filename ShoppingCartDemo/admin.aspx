@@ -34,7 +34,7 @@
     <form id="form1" runat="server">
             <div class="jumbotron">
         <div class="container text-center">
-            <h1>Shopping Cart Demo</h1>
+            <h1>Shopping Cart</h1>
         </div>
     </div>
 
@@ -107,7 +107,7 @@
             </div> 
 		      
             <div class="form-group pass_show"> 
-                <asp:button ID="button2" class="btn btn-success" runat="server" OnClick="button1_Click" Text="Login"></asp:button>
+                <asp:button ID="button2" class="btn btn-success" runat="server" OnClick="button1_Click" Text="Add new Item"></asp:button>
             </div>
 
 
@@ -119,7 +119,7 @@
 		</div>  
 	</div>
 </div>
-        <form class="form-inline" >
+        <%--<form class="form-inline" >
                 <div class="form-group">
                        <input type="text" class="form-control" id="name" placeholder="Product Name" name="name">
                 </div>
@@ -133,7 +133,7 @@
                   </div>
     
                 <button type="submit" class="btn btn-success">Submit</button>
-            </form>
+            </form>--%>
     </form>
 </body>
 </html>

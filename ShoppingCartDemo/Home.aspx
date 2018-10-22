@@ -32,7 +32,7 @@
 <body>
     <div class="jumbotron">
         <div class="container text-center">
-            <h1>Shopping Cart Demo</h1>
+            <h1>Shopping Cart</h1>
         </div>
     </div>
 

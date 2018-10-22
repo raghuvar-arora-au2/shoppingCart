@@ -23,7 +23,7 @@ namespace ShoppingCartDemo
             SqlConnection con = new SqlConnection(ConnectionString);
 
 
-            string query = "insert into Orders (CustomerID, OrderDateTime, TotalAmount) values (1, GETDATE() , " + Decimal.Parse(CalculateTotalAmount()) + "); SELECT SCOPE_IDENTITY();";
+            string query = "insert into Orders (CustomerID, OrderDateTime, TotalAmount) values (1, GETDATE() , " + (CalculateTotalAmount().ToString()) + "); SELECT SCOPE_IDENTITY();";
 
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
@@ -44,8 +44,11 @@ namespace ShoppingCartDemo
             cmd.Dispose();
 
             DatabaseConnection.CloseConnection(con);
+            System.Diagnostics.Debug.WriteLine("here");
 
             ClientScript.RegisterStartupScript(GetType(), "Popup", "successalert();", true);
+            System.Diagnostics.Debug.WriteLine("executed?");
+
         }
         private String CalculateTotalAmount()
         {

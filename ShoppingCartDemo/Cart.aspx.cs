@@ -19,30 +19,30 @@ namespace ShoppingCartDemo
 
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConnectionString);
+            //SqlConnection con = new SqlConnection(ConnectionString);
            
 
-            string query = "insert into Orders (CustomerID, OrderDateTime, TotalAmount) values (1, GETDATE() , " + Decimal.Parse(lblTotalAmount.Text) + "); SELECT SCOPE_IDENTITY();";
+            //string query = "insert into Orders (CustomerID, OrderDateTime, TotalAmount) values (1, GETDATE() , " + Decimal.Parse(lblTotalAmount.Text) + "); SELECT SCOPE_IDENTITY();";
 
-            SqlCommand cmd = new SqlCommand(query, con);
-            con.Open();
-            int OrderID = Convert.ToInt32(cmd.ExecuteScalar());
+            //SqlCommand cmd = new SqlCommand(query, con);
+            //con.Open();
+            //int OrderID = Convert.ToInt32(cmd.ExecuteScalar());
 
-            query = "insert into OrderDetails (OrderID, ProductID, Quantity, Amount) select " + OrderID + " AS OrderID, ProductID, Quantity, Amount from Cart where CartID='" + Session.SessionID + "'";
+            //query = "insert into OrderDetails (OrderID, ProductID, Quantity, Amount) select " + OrderID + " AS OrderID, ProductID, Quantity, Amount from Cart where CartID='" + Session.SessionID + "'";
 
-            cmd = new SqlCommand(query, con);
+            //cmd = new SqlCommand(query, con);
 
-            cmd.ExecuteNonQuery();
+            //cmd.ExecuteNonQuery();
 
-            query = "delete from Cart where CartID='" + Session.SessionID + "'";
+            //query = "delete from Cart where CartID='" + Session.SessionID + "'";
 
-            cmd = new SqlCommand(query, con);
+            //cmd = new SqlCommand(query, con);
 
-            cmd.ExecuteNonQuery();
+            //cmd.ExecuteNonQuery();
 
-            cmd.Dispose();
+            //cmd.Dispose();
 
-            DatabaseConnection.CloseConnection(con);
+            //DatabaseConnection.CloseConnection(con);
 
             ClientScript.RegisterStartupScript(GetType(), "Popup", "successalert();", true);
         }

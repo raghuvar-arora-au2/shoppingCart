@@ -39,7 +39,7 @@ namespace ShoppingCartDemo
             object result = cmd.ExecuteScalar();
             if (result!= null)
             {
-                Response.Redirect("Cart.aspx");
+                Response.Redirect("checkout.aspx");
             }
             else
             {

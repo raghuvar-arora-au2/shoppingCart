@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+
     <script>
         function successalert() {
             swal({
@@ -45,7 +47,7 @@
         <div>
          <div class="jumbotron">
         <div class="container text-center">
-            <h1>Shopping Cart Demo</h1>
+            <h1>Shopping Cart</h1>
         </div>
     </div>
 
@@ -130,7 +132,7 @@
                 </li>
             </ul>
             <br/>
-            <asp:Button runat="server" ID="checkoutBtn" OnClick="btn_click" class="btn btn-success btn-lg btn-block" role="button">Pay</asp:Button>
+            <asp:Button runat="server" ID="checkoutBtn" OnClick="btn_click" class="btn btn-success btn-lg btn-block" role="button" Text="Pay"></asp:Button>
         </div>
     </div>
 </div>
