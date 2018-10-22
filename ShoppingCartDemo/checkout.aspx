@@ -21,6 +21,24 @@
             });
         }
     </script>
+    <style>
+        /* Remove the navbar's default rounded borders and increase the bottom margin */
+        .navbar {
+            margin-bottom: 50px;
+            border-radius: 0;
+        }
+
+        /* Remove the jumbotron's default bottom margin */
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -108,11 +126,11 @@
                 </div>
             </div>
             <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span runat="server" id="amount">4200</span> Final Payment</a>
+                <li class="active"><a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"><asp:Label runat="server" ID="amount">4200</asp:Label> Final Payment</a>
                 </li>
             </ul>
             <br/>
-            <a href="/" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
+            <asp:Button runat="server" ID="checkoutBtn" OnClick="btn_click" class="btn btn-success btn-lg btn-block" role="button">Pay</asp:Button>
         </div>
     </div>
 </div>
