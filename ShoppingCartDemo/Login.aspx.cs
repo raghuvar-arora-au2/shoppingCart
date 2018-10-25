@@ -20,7 +20,12 @@ namespace ShoppingCartDemo
 
         protected void Page_Load(object sender, EventArgs e)
         {
-  
+            conn = new SqlConnection(ConnectionString);
+            cmd = new SqlCommand("select count(*) from Cart where CartID='" + Session.SessionID + "';", conn);
+            conn.Open();
+            object items = cmd.ExecuteScalar();
+            number.Text = items.ToString();
+            conn.Close();
         }
 
         protected void button1_Click(object sender, EventArgs e)

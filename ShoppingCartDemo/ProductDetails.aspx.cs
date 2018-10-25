@@ -36,6 +36,10 @@ namespace ShoppingCartDemo
             }
 
             dr.Close();
+            con.Open();
+            cmd = new SqlCommand("select count(*) from Cart where CartID='" + Session.SessionID + "';", con);
+            object items = cmd.ExecuteScalar();
+            number.Text = items.ToString();
 
             cmd.Dispose();
 

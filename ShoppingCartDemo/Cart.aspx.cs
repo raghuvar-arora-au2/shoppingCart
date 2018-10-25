@@ -56,6 +56,7 @@ namespace ShoppingCartDemo
             lblTotalAmount.Text = cmd.ExecuteScalar().ToString();
 
             cmd.Dispose();
+            
 
             con.Close() ;
         }
